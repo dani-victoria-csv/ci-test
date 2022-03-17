@@ -2,10 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
-        }
+      
+      stage('Install') {
+        steps { sh 'npm install' }
+      }
+      
+      stage('Unit tests') {
+          steps { sh 'npm run-script test' }
+      }
+      
+      stage('Build') {
+        steps { sh 'npm run-script build' }
+      }
     }
 }
