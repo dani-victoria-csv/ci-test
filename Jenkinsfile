@@ -5,21 +5,21 @@ pipeline {
       
       stage('Install') {
         steps {
-          sh 'npm install'
+          bat 'npm install'
         }
       }
       
       stage('Unit tests') {
         steps {
-          sh 'npm run test'
+          bat 'npm run test'
         }
       }
       
       stage('Build') {
         steps {
-          sh 'npm run build'
+          bat 'npm run build'
         }
-        
+
       }
 
     }
