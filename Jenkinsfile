@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    // Should not be included to the actual
+    environment {
+      env.PATH = env.PATH + ";c:\\Windows\\System32"
+    }
+
     stages {
       
       stage('Install') {
