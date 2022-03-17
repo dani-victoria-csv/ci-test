@@ -12,7 +12,7 @@ pipeline {
       
       stage('Unit tests') {
         steps {
-          bat 'npm run test'
+          bat 'npm run headless-test'
         }
       }
       
